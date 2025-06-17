@@ -1,0 +1,200 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1, h3 {
+    color: #4dabf7;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #404040;
+    color: #e0e0e0;
+}
+
+input::placeholder {
+    color: #a0a0a0;
+}
+
+button {
+    background-color: #005a87;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #00456a;
+}
+
+/* Estilo específico para os botões de adicionar parede e cômodo */
+#orcamentoForm > .input-group > button,
+#orcamentoForm > button {
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+#resumo {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #363636;
+    border: 1px solid #404040;
+    border-radius: 12px;
+    color: #e0e0e0;
+}
+
+#dadosCliente input {
+    margin-bottom: 10px;
+}
+
+#dadosCliente button {
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #28a745;
+    border-radius: 8px;
+}
+
+#dadosCliente button:hover {
+    background-color: #218838;
+}
+
+.quantidade-controls button {
+    background-color: #00456a;
+    border: 1px solid #404040;
+    padding: 5px;
+    font-size: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+}
+
+.quantidade {
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+/* Estilo para o botão "Adicionar Teto" */
+#addTetoButton {
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto branca */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Padding confortável para tornar o botão maior */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição suaves */
+}
+
+#addTetoButton:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+#addTetoButton:active {
+    background-color: #003f8e; /* Cor de fundo ao clicar */
+    transform: translateY(1px); /* Efeito de clique */
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #363636;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.checkbox-label:hover {
+    background-color: #404040;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-label span {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.comodo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #363636;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.comodo-info {
+    flex: 1;
+}
+
+.remover-comodo {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 15px;
+    width: auto;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.remover-comodo:hover {
+    background-color: #c82333;
+}

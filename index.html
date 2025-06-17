@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Orçamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à Criação de Orçamentos</h1>
+        <form id="orcamentoForm">
+            <div class="input-group">
+                <label for="nome">Qual o seu nome?</label>
+                <input type="text" id="nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="telefoneOrcamentista">Seu telefone:</label>
+                <input type="tel" id="telefoneOrcamentista" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <div class="input-group">
+                <label for="comodo">Escolha o cômodo que você deseja orçar:</label>
+                <select id="comodo">
+                    <option value="Quarto">Quarto</option>
+                    <option value="Suíte">Suíte</option>
+                    <option value="Sala de Estar">Sala de Estar</option>
+                    <option value="Sala de Jantar">Sala de Jantar</option>
+                    <option value="Cozinha">Cozinha</option>
+                    <option value="Banheiro">Banheiro</option>
+                    <option value="Área Gourmet">Área Gourmet</option>
+                    <option value="Lavanderia">Lavanderia</option>
+                    <option value="Home Office">Home Office</option>
+                    <option value="Closet">Closet</option>
+                    <option value="Varanda">Varanda</option>
+                    <option value="Hall">Hall</option>
+                    <option value="Escritório">Escritório</option>
+                    <option value="Sala de TV">Sala de TV</option>
+                    <option value="Área de Serviço">Área de Serviço</option>
+                    <option value="Garagem">Garagem</option>
+                    <option value="Depósito">Depósito</option>
+                    <option value="Sala de Estudos">Sala de Estudos</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Informações das paredes:</label>
+                <div id="paredes"></div>
+                <button type="button" onclick="addParede(true)">Adicionar Parede</button>
+                <div id="paredes">
+                    <!-- Paredes serão adicionadas dinamicamente aqui -->
+                </div>
+                
+                
+                
+            </div>
+
+            <div class="input-group">
+                <label for="teto" class="checkbox-label">
+                    <input type="checkbox" id="teto" onchange="toggleTeto()">
+                    <span>Sim, desejo orçar o teto</span>
+                </label>
+            </div>
+
+            <div id="tetoInputs" class="input-group hidden">
+                <label for="larguraTeto">Largura do teto (m):</label>
+                <input type="number" step="0.01" id="larguraTeto">
+                <label for="comprimentoTeto">Comprimento do teto (m):</label>
+                <input type="number" step="0.01" id="comprimentoTeto">
+            </div>
+
+            <button type="button" onclick="adicionarComodo()">Adicionar Cômodo</button>
+            <button type="button" id="finalizarProjeto" class="hidden" onclick="exibirResumo()">Finalizar Projeto</button>
+        </form>
+
+        <div id="resumo"></div>
+
+        <div id="dadosCliente" class="hidden">
+            <h3>Informe seus dados para finalizar:</h3>
+            <input type="text" id="nomeCliente" placeholder="Nome completo" required>
+            <input type="tel" id="telefoneCliente" placeholder="Telefone" required>
+            <button type="button" onclick="enviarWhatsApp()">Enviar via WhatsApp</button>
+        </div>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
